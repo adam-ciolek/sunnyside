@@ -7,7 +7,7 @@
 	grid-template-columns: auto;
 	grid-template-rows: 700px 700px;
 	&__cherry {
-		background: url("../../images/mobile/image-graphic-design.jpg");
+		background: url("../images/mobile/image-graphic-design.jpg");
 		@include background;
 		position: relative;
 		&__text {
@@ -30,7 +30,7 @@
 	}
 
 	&__orange {
-		background: url("../../images/mobile/image-photography.jpg");
+		background: url("../images/mobile/image-photography.jpg");
 		@include background;
 		position: relative;
 		&__text {

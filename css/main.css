@@ -15,8 +15,8 @@ body {
 .wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto auto auto auto auto auto auto;
-      grid-template-rows: auto auto auto auto auto auto auto;
+  -ms-grid-rows: auto auto auto auto auto auto;
+      grid-template-rows: auto auto auto auto auto auto;
       grid-template-areas: "header" "main" "work" "clients" "gallery" "footer";
 }
 
@@ -56,7 +56,7 @@ a {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
-  background-image: url("../../../images/mobile/image-header.jpg");
+  background-image: url("../images/mobile/image-header.jpg");
   background-size: cover;
   min-height: 90vh;
   background-position: center;
@@ -321,7 +321,7 @@ a {
 }
 
 .offer__cherry {
-  background: url("../../images/mobile/image-graphic-design.jpg");
+  background: url("../images/mobile/image-graphic-design.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -351,7 +351,7 @@ a {
 }
 
 .offer__orange {
-  background: url("../../images/mobile/image-photography.jpg");
+  background: url("../images/mobile/image-photography.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

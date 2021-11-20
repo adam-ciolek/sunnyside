@@ -1,0 +1,35 @@
+.footer {
+	grid-area: footer;
+	background-color: $color-footer;
+	text-align: center;
+}
+
+.footer-nav {
+	margin: 5em 0;
+	svg path {
+		fill: $color-text-design;
+	}
+	&__menu {
+		margin: 3em 0;
+		a {
+			text-decoration: none;
+			font-size: clamp(1.3rem, 1.5vw, 1.6rem);
+			color: $color-text-design;
+			font-family: $font-family-text;
+			&:nth-child(2) {
+				margin: 0 2rem;
+			}
+		}
+	}
+
+	&__social {
+		margin-top: 3.5rem;
+		span {
+			cursor: pointer;
+			margin-left: 2rem;
+			&:nth-child(1) {
+				margin-left: 0;
+			}
+		}
+	}
+}

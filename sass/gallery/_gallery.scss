@@ -1,0 +1,12 @@
+.gallery {
+	grid-area: gallery;
+}
+
+.gallery-picture {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	grid-template-rows: auto auto;
+	img {
+		width: 100%;
+	}
+}

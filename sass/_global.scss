@@ -1,0 +1,96 @@
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: $font-size-primary;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-rows: auto auto auto auto auto auto auto;
+	grid-template-areas:
+		"header"
+		"main"
+		"work"
+		"clients"
+		"gallery"
+		"footer";
+}
+
+h1 {
+	font-size: clamp(2.4rem, 2.5vw, 3rem);
+	font-family: $font-family-special;
+	color: $color-text-special;
+	font-weight: $font-weight-hard;
+}
+
+h2 {
+	font-size: clamp(1.9rem, 2.5vw, 3rem);
+	font-family: $font-family-special;
+	color: $color-text-light;
+	margin: 1.8em 0 1.8em;
+	letter-spacing: $letter-spacing-ligth;
+	font-weight: $font-weidht-normal;
+}
+
+p {
+	font-size: clamp(1.3rem, 1.5vw, 2.2rem);
+	line-height: $line-height;
+}
+
+h4 {
+	font-size: clamp(1.3rem, 1.5vw, 2rem);
+	margin-bottom: 0.6em;
+	font-weight: $font-weight-hard;
+	font-family: $font-family-special;
+}
+
+a {
+	text-decoration: none;
+}
+
+@mixin img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+@mixin text {
+	width: 90%;
+	margin: 0 auto;
+}
+
+@mixin btn {
+	text-align: center;
+	font-size: clamp(1.3rem, 1.6vw, 2.2rem);
+	position: relative;
+}
+
+@mixin background-after {
+	position: absolute;
+	content: "";
+	top: 80%;
+	left: 50%;
+	height: 0.5rem;
+	width: 8rem;
+	border-radius: 10px;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+@mixin background {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@mixin span {
+	font-family: $font-family-text;
+	font-size: 1rem;
+	color: $color-text-light;
+}

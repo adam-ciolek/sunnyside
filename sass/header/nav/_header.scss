@@ -1,0 +1,43 @@
+.header {
+	grid-area: header;
+	background-image: url("../../../images/mobile/image-header.jpg");
+	background-size: cover;
+	min-height: 90vh;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.navigation {
+	margin: 30px 20px;
+	display: grid;
+	grid-template-columns: auto auto 80px;
+	grid-template-areas: "logo . hamburger";
+	align-items: center;
+	&__logo {
+		grid-area: logo;
+	}
+	&__hamburger {
+		grid-area: hamburger;
+		justify-self: flex-end;
+	}
+}
+
+.hero {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	&__title {
+		font-size: 3rem;
+		letter-spacing: 0.2rem;
+		text-transform: uppercase;
+		color: $color-priamry;
+		font-family: $font-family-special;
+		font-weight: $font-weight-hard;
+		margin-bottom: 80px;
+	}
+	svg {
+		cursor: pointer;
+	}
+}

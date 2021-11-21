@@ -4,12 +4,19 @@
 
 .offer {
 	display: grid;
-	grid-template-columns: auto;
 	grid-template-rows: 700px 700px;
+	@media (min-width: $desktop-size) {
+		grid-template-columns: auto auto;
+		grid-template-rows: 700px;
+	}
 	&__cherry {
 		background: url("../images/mobile/image-graphic-design.jpg");
 		@include background;
 		position: relative;
+		@media (min-width: $desktop-size) {
+			background: url("../images/desktop/image-graphic-design.jpg");
+			@include background;
+		}
 		&__text {
 			@include text;
 			text-align: center;
@@ -33,6 +40,10 @@
 		background: url("../images/mobile/image-photography.jpg");
 		@include background;
 		position: relative;
+		@media (min-width: $desktop-size) {
+			background: url("../images/desktop/image-photography.jpg");
+			@include background;
+		}
 		&__text {
 			@include text;
 			text-align: center;

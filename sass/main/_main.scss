@@ -9,6 +9,9 @@
 	grid-template-areas:
 		"info-box"
 		"info-box-second";
+	@media (min-width: $desktop-size) {
+		grid-template-columns: 1fr auto;
+	}
 }
 
 .info-box {
@@ -16,8 +19,16 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 500px;
+	@media (min-width: $desktop-size) {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		align-items: center;
+	}
 	&__img {
 		@include img;
+		@media (min-width: $desktop-size) {
+			order: 2;
+		}
 	}
 	&__btn {
 		@include btn;
@@ -36,6 +47,12 @@
 	grid-template-columns: 1fr;
 	grid-template-rows: 500px;
 	margin: 2rem 0;
+	@media (min-width: $desktop-size) {
+		grid-template-columns: 1fr 50%;
+		grid-template-rows: auto;
+		align-items: center;
+		margin: 0;
+	}
 	&__img {
 		@include img;
 	}
@@ -67,6 +84,9 @@
 	&__description {
 		margin: 2rem 0;
 		line-height: $line-height-text;
+	}
+	@media (min-width: $desktop-size) {
+		text-align: left;
 	}
 }
 

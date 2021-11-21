@@ -2,11 +2,25 @@
 	grid-area: gallery;
 }
 
-.gallery-picture {
+.gallery-picture-mobile {
 	display: grid;
 	grid-template-columns: repeat(2, auto);
 	grid-template-rows: auto auto;
 	img {
 		width: 100%;
+	}
+	@media (min-width: $desktop-size) {
+		display: none;
+	}
+}
+.gallery-picture-desktop {
+	display: none;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: auto;
+	img {
+		width: 100%;
+	}
+	@media (min-width: $desktop-size) {
+		display: grid;
 	}
 }

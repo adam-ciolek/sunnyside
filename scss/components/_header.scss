@@ -1,0 +1,81 @@
+@use "../abstracts" as *;
+
+.header {
+	grid-area: header;
+	background-image: url("../../images/mobile/image-header.jpg");
+	background-size: cover;
+	min-height: 90vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	@media (min-width: $desktop-size) {
+		background-image: url("../../images/desktop/image-header.jpg");
+	}
+}
+
+.navigation {
+	margin: 30px 30px;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-areas: "logo . hamburger";
+	align-items: center;
+	@media (min-width: $desktop-size) {
+		grid-template-columns: auto 1fr 400px;
+		margin: 30px 50px;
+	}
+	&__logo {
+		grid-area: logo;
+	}
+	&__menu {
+		ul {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			li {
+				&:last-child a {
+					background-color: $color-priamry;
+					padding: 0.7em 1.2em;
+					border-radius: 2rem;
+					color: rgb(36, 36, 36);
+					font-family: $font-family-special;
+				}
+			}
+			a {
+				font-size: 1.2rem;
+				color: $color-priamry;
+				font-family: $font-family-text;
+			}
+		}
+		@media (max-width: $desktop-size) {
+			display: none;
+		}
+	}
+	&__hamburger {
+		grid-area: hamburger;
+		justify-self: flex-end;
+		@media (min-width: ($desktop-size + 1px)) {
+			display: none;
+		}
+	}
+}
+
+.hero {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	&__title {
+		letter-spacing: 0.2rem;
+		text-transform: uppercase;
+		color: $color-priamry;
+		font-family: $font-family-special;
+		font-weight: $font-weight-hard;
+		margin-bottom: 80px;
+	}
+	svg {
+		cursor: pointer;
+	}
+	@media (min-width: $desktop-size) {
+		top: 40%;
+	}
+}

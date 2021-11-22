@@ -27,6 +27,7 @@
 	}
 	&__menu {
 		ul {
+			position: relative;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -38,15 +39,21 @@
 					color: rgb(36, 36, 36);
 					font-family: $font-family-special;
 				}
+				@media (max-width: $desktop-size) {
+					margin: 30px 0;
+				}
 			}
 			a {
 				font-size: 1.2rem;
 				color: $color-priamry;
 				font-family: $font-family-text;
+				@media (max-width: $desktop-size) {
+					color: $color-text;
+				}
 			}
-		}
-		@media (max-width: $desktop-size) {
-			display: none;
+			@media (max-width: $desktop-size) {
+				display: none;
+			}
 		}
 	}
 	&__hamburger {

@@ -11,7 +11,7 @@
 	grid-template-areas:
 		"info-box"
 		"info-box-second";
-	@media (min-width: $desktop-size) {
+	@include mq(large) {
 		grid-template-columns: 1fr auto;
 	}
 }
@@ -21,19 +21,22 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 500px;
-	@media (min-width: $desktop-size) {
+	@include mq(large) {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto;
 		align-items: center;
 	}
 	&__img {
 		@include img;
-		@media (min-width: $desktop-size) {
+		@include mq(large) {
 			order: 2;
 		}
 	}
 	&__btn {
 		@include btn;
+		@include mq(large) {
+			text-align: left;
+		}
 	}
 	&__btn-link {
 		text-decoration: none;
@@ -49,7 +52,7 @@
 	grid-template-columns: 1fr;
 	grid-template-rows: 500px;
 	margin: 2rem 0;
-	@media (min-width: $desktop-size) {
+	@include mq(large) {
 		grid-template-columns: 1fr 50%;
 		grid-template-rows: auto;
 		align-items: center;
@@ -60,6 +63,9 @@
 	}
 	&__btn {
 		@include btn;
+		@include mq(large) {
+			text-align: left;
+		}
 	}
 	&__btn-link {
 		text-decoration: none;
@@ -72,11 +78,17 @@
 .info-box__btn--background::before {
 	@include background-after;
 	background-color: $color-after-yellow;
+	@include mq(large) {
+		background-color: transparent;
+	}
 }
 
 .info-box__btn--background-second::before {
 	@include background-after;
 	background-color: $color-after-red;
+	@include mq(large) {
+		background-color: transparent;
+	}
 }
 
 .info-text {
@@ -87,7 +99,7 @@
 		margin: 2rem 0;
 		line-height: $line-height-text;
 	}
-	@media (min-width: $desktop-size) {
+	@include mq(large) {
 		text-align: left;
 	}
 }

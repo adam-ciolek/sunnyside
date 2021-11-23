@@ -3,7 +3,7 @@
 .clients {
 	grid-area: clients;
 	text-align: center;
-	@media (min-width: $desktop-size) {
+	@include mq(large) {
 		margin: 2rem 0 5rem;
 	}
 }
@@ -16,7 +16,7 @@
 		"first"
 		"second"
 		"third";
-	@media (min-width: $desktop-size) {
+	@include mq(large) {
 		grid-template-columns: repeat(3, auto);
 		grid-template-areas: "first second third";
 		margin-top: 8rem;

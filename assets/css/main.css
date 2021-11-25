@@ -314,12 +314,13 @@ a {
   margin-top: 4rem;
 }
 .info-text__description {
-  margin: 2rem 0;
+  margin: 1rem 0;
   line-height: 1.6;
 }
 @media (min-width: 1024px) {
   .info-text {
     text-align: left;
+    width: 70%;
   }
 }
 
@@ -368,6 +369,11 @@ a {
   height: 100%;
   text-align: center;
 }
+@media (min-width: 1024px) {
+  .offer__cherry__text {
+    width: 70%;
+  }
+}
 .offer__cherry__title {
   color: #25564b;
   grid-row: 4/5;
@@ -403,6 +409,11 @@ a {
   height: 100%;
   text-align: center;
 }
+@media (min-width: 1024px) {
+  .offer__orange__text {
+    width: 70%;
+  }
+}
 .offer__orange__title {
   color: #19536b;
   grid-row: 4/5;
@@ -434,9 +445,10 @@ a {
 }
 @media (min-width: 1024px) {
   .clients-opinions {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "first second third";
     margin-top: 8rem;
+    justify-content: center;
   }
 }
 .clients-opinions__img {
@@ -452,6 +464,16 @@ a {
   font-weight: 700;
   font-family: "Barlow", sans-serif;
   font-size: clamp(1.1rem, 1.2vw, 1.8rem);
+}
+@media (min-width: 768px) {
+  .clients-opinions__description {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .clients-opinions__description {
+    width: 70%;
+  }
 }
 .clients-opinions__job {
   font-family: "Barlow", sans-serif;

@@ -17,9 +17,10 @@
 		"second"
 		"third";
 	@include mq(large) {
-		grid-template-columns: repeat(3, auto);
+		grid-template-columns: repeat(3, 1fr);
 		grid-template-areas: "first second third";
 		margin-top: 8rem;
+		justify-content: center;
 	}
 	&__img {
 		width: 100px;
@@ -33,6 +34,12 @@
 		font-weight: $font-weight-medium;
 		font-family: $font-family-text;
 		font-size: clamp(1.1rem, 1.2vw, 1.8rem);
+		@include mq(medium) {
+			width: 50%;
+		}
+		@include mq(large) {
+			width: 70%;
+		}
 	}
 	&__job {
 		@include span;

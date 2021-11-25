@@ -25,6 +25,9 @@
 			grid-template-rows: 1fr 1fr 1fr 1fr 100px 1fr;
 			height: 100%;
 			text-align: center;
+			@include mq(large) {
+				width: 70%;
+			}
 		}
 		&__title {
 			color: $color-text-design;
@@ -54,6 +57,9 @@
 			grid-template-rows: 1fr 1fr 1fr 1fr 100px 1fr;
 			height: 100%;
 			text-align: center;
+			@include mq(large) {
+				width: 70%;
+			}
 		}
 		&__title {
 			color: $color-photography;

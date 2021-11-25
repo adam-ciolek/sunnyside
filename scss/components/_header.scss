@@ -19,7 +19,7 @@
 	grid-template-columns: auto auto auto;
 	grid-template-areas: "logo . hamburger";
 	align-items: center;
-
+	position: relative;
 	@include mq(large) {
 		grid-template-columns: auto 1fr 400px;
 		margin: 30px 50px;
@@ -29,17 +29,26 @@
 	}
 	&__menu {
 		ul {
-			display: none;
+			width: 80%;
+			top: 60px;
+			right: 0;
+			position: absolute;
 			justify-content: space-between;
 			align-items: center;
+			background-color: $color-after-yellow;
+			z-index: 1;
+			text-align: center;
 			li {
 				margin: 2rem 0;
 				&:last-child a {
-					background-color: $color-priamry;
-					padding: 0.7em 1.2em;
 					border-radius: 2rem;
-					color: rgb(36, 36, 36);
+					color: $color-priamry;
 					font-family: $font-family-special;
+					@include mq(large) {
+						background-color: $color-priamry;
+						padding: 0.7em 1.2em;
+						color: rgb(36, 36, 36);
+					}
 				}
 				@include mq(large) {
 					margin: 30px 0;
@@ -49,11 +58,18 @@
 				}
 			}
 			a {
-				font-size: 1.2rem;
+				font-size: 1.6rem;
 				color: $color-priamry;
 				font-family: $font-family-text;
+				@include mq(large) {
+					font-size: 1.2rem;
+				}
 			}
 			@include mq(large) {
+				position: relative;
+				top: 0;
+				background-color: transparent;
+				opacity: 1;
 				display: flex;
 			}
 		}
@@ -65,6 +81,10 @@
 			display: none;
 		}
 	}
+}
+
+.is-hidden {
+	display: none;
 }
 
 .hero {

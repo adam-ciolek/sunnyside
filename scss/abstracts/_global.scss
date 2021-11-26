@@ -1,6 +1,6 @@
 @use "./typography" as *;
 @use "./color" as *;
-@use "./breakpoints";
+@use "./breakpoints" as *;
 
 *,
 ::after,
@@ -27,14 +27,17 @@ body {
 }
 
 h1 {
-	font-size: clamp(2.4rem, 2.5vw, 3rem);
+	font-size: 2rem;
 	font-family: $font-family-special;
 	color: $color-text-special;
 	font-weight: $font-weight-hard;
+	@include mq(large) {
+		font-size: 3rem;
+	}
 }
 
 h2 {
-	font-size: clamp(1.9rem, 2.5vw, 3rem);
+	font-size: clamp(1.9rem, 2.2vw, 2.6rem);
 	font-family: $font-family-special;
 	color: $color-text-light;
 	margin: 1.8em 0 1.8em;
@@ -43,12 +46,12 @@ h2 {
 }
 
 p {
-	font-size: clamp(1.3rem, 1.5vw, 2.2rem);
+	font-size: 1.2rem;
 	line-height: $line-height;
 }
 
 h4 {
-	font-size: clamp(1.3rem, 1.5vw, 2rem);
+	font-size: 1.1rem;
 	margin-bottom: 0.6em;
 	font-weight: $font-weight-hard;
 	font-family: $font-family-special;
@@ -77,7 +80,7 @@ a {
 
 @mixin btn {
 	text-align: center;
-	font-size: clamp(1.3rem, 1.6vw, 2.2rem);
+	font-size: 1.3rem;
 	position: relative;
 }
 

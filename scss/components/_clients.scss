@@ -16,8 +16,9 @@
 		"first"
 		"second"
 		"third";
+	align-items: center;
 	@include mq(large) {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(3, min(400px));
 		grid-template-areas: "first second third";
 		margin-top: 8rem;
 		justify-content: center;
@@ -28,17 +29,17 @@
 	}
 	&__description {
 		@include text;
-		margin: 2em auto;
+		margin: 2.5em auto;
 		line-height: $line-height;
-		color: $color-text;
+		color: $color-text-dark;
 		font-weight: $font-weight-medium;
 		font-family: $font-family-text;
-		font-size: clamp(1.1rem, 1.2vw, 1.8rem);
+		font-size: 1rem;
 		@include mq(medium) {
 			width: 50%;
 		}
 		@include mq(large) {
-			width: 70%;
+			width: 75%;
 		}
 	}
 	&__job {

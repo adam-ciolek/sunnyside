@@ -18,14 +18,19 @@ body {
 }
 
 h1 {
-  font-size: clamp(2.4rem, 2.5vw, 3rem);
+  font-size: 2rem;
   font-family: "Fraunces", serif;
   color: #23303e;
   font-weight: 900;
 }
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
 
 h2 {
-  font-size: clamp(1.9rem, 2.5vw, 3rem);
+  font-size: clamp(1.9rem, 2.2vw, 2.6rem);
   font-family: "Fraunces", serif;
   color: #a7abae;
   margin: 1.8em 0 1.8em;
@@ -34,12 +39,12 @@ h2 {
 }
 
 p {
-  font-size: clamp(1.3rem, 1.5vw, 2.2rem);
+  font-size: 1.2rem;
   line-height: 1.6;
 }
 
 h4 {
-  font-size: clamp(1.3rem, 1.5vw, 2rem);
+  font-size: 1.1rem;
   margin-bottom: 0.6em;
   font-weight: 900;
   font-family: "Fraunces", serif;
@@ -199,6 +204,7 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 500px;
+  justify-items: center;
 }
 @media (min-width: 1024px) {
   .info-box {
@@ -219,7 +225,7 @@ a {
 }
 .info-box__btn {
   text-align: center;
-  font-size: clamp(1.3rem, 1.6vw, 2.2rem);
+  font-size: 1.3rem;
   position: relative;
 }
 @media (min-width: 1024px) {
@@ -240,6 +246,7 @@ a {
   grid-template-columns: 1fr;
   grid-template-rows: 500px;
   margin: 2rem 0;
+  justify-items: center;
 }
 @media (min-width: 1024px) {
   .info-box-second {
@@ -256,12 +263,13 @@ a {
 }
 .info-box-second__btn {
   text-align: center;
-  font-size: clamp(1.3rem, 1.6vw, 2.2rem);
+  font-size: 1.3rem;
   position: relative;
 }
 @media (min-width: 1024px) {
   .info-box-second__btn {
     text-align: left;
+    margin-top: 0.4rem;
   }
 }
 .info-box-second__btn-link {
@@ -311,16 +319,29 @@ a {
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  margin-top: 4rem;
+  margin: 3rem 0;
 }
 .info-text__description {
   margin: 1rem 0;
   line-height: 1.6;
 }
+@media (min-width: 768px) {
+  .info-text__description {
+    width: 70%;
+    margin: 1rem auto;
+  }
+}
+@media (min-width: 1024px) {
+  .info-text__description {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
 @media (min-width: 1024px) {
   .info-text {
+    margin: 0;
     text-align: left;
-    width: 70%;
+    width: min(80%, 500px);
   }
 }
 
@@ -369,9 +390,14 @@ a {
   height: 100%;
   text-align: center;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .offer__cherry__text {
     width: 70%;
+  }
+}
+@media (min-width: 1024px) {
+  .offer__cherry__text {
+    width: min(80%, 500px);
   }
 }
 .offer__cherry__title {
@@ -411,7 +437,7 @@ a {
 }
 @media (min-width: 1024px) {
   .offer__orange__text {
-    width: 70%;
+    width: min(80%, 500px);
   }
 }
 .offer__orange__title {
@@ -442,10 +468,11 @@ a {
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
   grid-template-areas: "first" "second" "third";
+  align-items: center;
 }
 @media (min-width: 1024px) {
   .clients-opinions {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 400px);
     grid-template-areas: "first second third";
     margin-top: 8rem;
     justify-content: center;
@@ -458,12 +485,12 @@ a {
 .clients-opinions__description {
   width: 90%;
   margin: 0 auto;
-  margin: 2em auto;
+  margin: 2.5em auto;
   line-height: 1.6;
-  color: #23303e;
+  color: #818498;
   font-weight: 700;
   font-family: "Barlow", sans-serif;
-  font-size: clamp(1.1rem, 1.2vw, 1.8rem);
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   .clients-opinions__description {
@@ -472,7 +499,7 @@ a {
 }
 @media (min-width: 1024px) {
   .clients-opinions__description {
-    width: 70%;
+    width: 75%;
   }
 }
 .clients-opinions__job {

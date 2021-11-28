@@ -18,6 +18,10 @@
 			font-size: clamp(1.3rem, 1.5vw, 1.6rem);
 			color: $color-text-design;
 			font-family: $font-family-text;
+			transition: all 0.2s ease;
+			&:hover {
+				color: $color-priamry;
+			}
 			&:nth-child(2) {
 				margin: 0 2rem;
 			}
@@ -29,6 +33,12 @@
 		span {
 			cursor: pointer;
 			margin-left: 2rem;
+			path {
+				transition: all 0.2s ease;
+			}
+			svg:hover path {
+				fill: $color-priamry;
+			}
 			&:nth-child(1) {
 				margin-left: 0;
 			}

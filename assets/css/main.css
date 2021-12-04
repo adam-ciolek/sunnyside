@@ -106,15 +106,15 @@ a {
 }
 .navigation__menu ul li:last-child a {
   border-radius: 2rem;
-  color: white;
+  color: #242424;
   font-family: "Fraunces", serif;
   transition: all 0.2s ease;
   background-color: white;
+  padding: 0.5rem 1rem;
 }
 @media (min-width: 1024px) {
   .navigation__menu ul li:last-child a {
     padding: 0.7em 1.2em;
-    color: #242424;
   }
 }
 @media (min-width: 1024px) {

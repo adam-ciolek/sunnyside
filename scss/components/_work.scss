@@ -60,6 +60,9 @@
 			grid-template-rows: 1fr 1fr 1fr 1fr 100px 1fr;
 			height: 100%;
 			text-align: center;
+			@include mq(medium) {
+				width: 70%;
+			}
 			@include mq(large) {
 				width: min(80%, 500px);
 			}

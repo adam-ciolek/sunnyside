@@ -436,6 +436,11 @@ a {
   height: 100%;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .offer__orange__text {
+    width: 70%;
+  }
+}
 @media (min-width: 1024px) {
   .offer__orange__text {
     width: min(80%, 500px);
